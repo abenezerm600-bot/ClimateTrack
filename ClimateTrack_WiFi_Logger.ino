@@ -1,7 +1,6 @@
 // ClimateTrack: ESP32 + DHT11 + I2C 16x2 LCD + Wi-Fi dashboard + CSV logging
 // Board: ESP32 Dev Module (or your actual ESP32 board)
-// Libraries: DHT sensor library + Adafruit Unified Sensor, LiquidCrystal_I2C
-// WiFi, WebServer, Wire and LittleFS are included with Arduino-ESP32.
+
 
 #include <WiFi.h>
 #include <WebServer.h>
@@ -10,16 +9,15 @@
 #include <LiquidCrystal_I2C.h>
 #include <DHT.h>
 
-// IMPORTANT: Use your own 2.4 GHz Wi-Fi or phone hotspot credentials.
-// Do NOT commit real passwords to a public GitHub repository.
+
+
 const char* WIFI_NAME = "YOUR_HOTSPOT_NAME";
 const char* WIFI_PASSWORD = "YOUR_HOTSPOT_PASSWORD";
 
 #define DHTPIN 4
 #define DHTTYPE DHT11
 
-// The I2C address of your already-working LCD is assumed to be 0x27.
-// If your previous working sketch used 0x3F, change this to 0x3F.
+
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 DHT dht(DHTPIN, DHTTYPE);
 WebServer server(80);

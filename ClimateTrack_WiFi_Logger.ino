@@ -44,7 +44,7 @@ const char DASHBOARD[] PROGMEM = R"rawliteral(
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EnviroSense</title>
+<title>ClimateTrack</title>
 <style>
   *{box-sizing:border-box} body{margin:0;padding:30px 15px;background:#eef3f9;color:#17314b;font-family:Arial,sans-serif;text-align:center}
   main{max-width:440px;margin:auto}h1{margin:6px 0 3px}p{color:#62748a}
@@ -55,7 +55,7 @@ const char DASHBOARD[] PROGMEM = R"rawliteral(
 </style>
 </head>
 <body><main>
-  <h1>EnviroSense</h1>
+  <h1>ClimateTrack</h1>
   <p>ESP32 Temperature &amp; Humidity Monitor</p>
   <div class="card"><div class="label">Temperature</div><div id="temp" class="value">--</div></div>
   <div class="card"><div class="label">Humidity</div><div id="humid" class="value">--</div></div>
@@ -161,7 +161,7 @@ void setup() {
   lcd.init();
   lcd.backlight();
   dht.begin();
-  lcdLine(0, "EnviroSense");
+  lcdLine(0, "ClimateTrack");
   lcdLine(1, "Starting...");
 
   // May format the filesystem if mount fails. Back up logs regularly.
